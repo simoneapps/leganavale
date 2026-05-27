@@ -6,117 +6,322 @@
     <title>Lega Navale Italiana - Sezione di Giugliano in Campania</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link href='mod/aalborg_theme/fonts/style.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="mod/aalborg_theme/graphics/nuovo_layout/css/owl.carousel.css">
-    <link rel="stylesheet" href="mod/aalborg_theme/graphics/nuovo_layout/css/main-style.css">
-    <link rel="stylesheet" href="mod/aalborg_theme/graphics/nuovo_layout/css/style.css">
-    <link rel="stylesheet" href="mod/aalborg_theme/js/lightgallery/css/lightgallery.css">
+    <!-- Importazione Font Istituzionali Simili -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('IMG-20260527-WA0023.jpg');
+        :root {
+            --lni-blue: #003366; /* Blu Navy Profondo */
+            --lni-light-blue: #0073bf;
+            --lni-gold: #c5a059; /* Oro Istituzionale */
+            --lni-white: #ffffff;
+            --lni-gray: #f4f7f9;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: var(--lni-white);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--lni-blue);
+            color: white;
+            padding: 8px 0;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--lni-blue);
+        }
+        .logo-box img {
+            height: 70px;
+            margin-right: 15px;
+        }
+        .logo-text h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            font-size: 13px;
+            display: block;
+            color: var(--lni-light-blue);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.4)), url('IMG-20260527-WA0098.jpg');
             background-size: cover;
             background-position: center;
-            height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-align: center;
+            position: relative;
         }
-        .hero-content h1 { font-size: 3.5rem; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .hero-content p { font-size: 1.5rem; margin-top: 20px; }
-        
-        .section-padding { padding: 60px 0; }
-        .bg-light { background-color: #f8f9fa; }
-        .text-primary-lni { color: #0073bf; }
-        
-        .gallery-item { margin-bottom: 30px; }
-        .gallery-item img { width: 100%; border-radius: 8px; transition: transform 0.3s; cursor: pointer; }
-        .gallery-item img:hover { transform: scale(1.05); }
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+        .hero-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        .btn-gold {
+            background-color: var(--lni-gold);
+            color: var(--lni-blue);
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 14px;
+            display: inline-block;
+        }
+        .btn-gold:hover {
+            background-color: #b38f4d;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
 
-        .logo-text { font-weight: bold; color: #004d80; line-height: 1.2; }
-        .logo-text small { display: block; font-size: 0.6em; color: #0073bf; }
-        
-        #main-nav { background: #fff; border-bottom: 1px solid #eee; padding: 15px 0; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-        .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
-        .logo-container img { height: 60px; }
+        /* Section Intro */
+        .intro {
+            padding: 100px 20px;
+            text-align: center;
+            background: var(--lni-gray);
+        }
+        .intro h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--lni-blue);
+            margin-bottom: 20px;
+        }
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: var(--lni-gold);
+            margin: 30px auto;
+        }
+
+        /* Cards Section */
+        .features {
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--lni-blue);
+            transition: 0.3s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card i {
+            font-size: 3rem;
+            color: var(--lni-gold);
+            margin-bottom: 20px;
+        }
+        .card h4 {
+            font-size: 1.5rem;
+            color: var(--lni-blue);
+            margin-bottom: 15px;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+            border-radius: 4px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--lni-blue);
+            color: white;
+            padding: 80px 20px 40px;
+            text-align: center;
+        }
+        .footer-logo img {
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+        .social-links a:hover {
+            color: var(--lni-gold);
+        }
+        .copyright {
+            margin-top: 50px;
+            font-size: 13px;
+            opacity: 0.7;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h2 { font-size: 2.5rem; }
+            .hero-content p { font-size: 1.1rem; }
+            .features { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
-    <nav id="main-nav">
+    <div class="top-bar">
+        Lega Navale Italiana - Ente Pubblico preposto a servizi di pubblico interesse
+    </div>
+
+    <nav>
         <div class="nav-container">
-            <a href="#" class="logo-container">
-                <img src="mod/aalborg_theme/graphics/nuovo_layout/images/logo.png" alt="LNI Logo">
+            <a href="index.html" class="logo-box">
+                <img src="mod/aalborg_theme/graphics/nuovo_layout/images/logo.png" alt="Logo LNI">
                 <div class="logo-text">
-                    LEGA NAVALE ITALIANA
-                    <small>Sezione di Giugliano in Campania</small>
+                    <h1>LEGA NAVALE ITALIANA</h1>
+                    <span>Sezione di Giugliano in Campania</span>
                 </div>
             </a>
+            <div class="social-links d-none d-md-block" style="font-size: 18px;">
+                <a href="#" style="color:var(--lni-blue)"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color:var(--lni-blue)"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero-section">
+    <header class="hero">
         <div class="hero-content">
-            <h1>Adottiamo il Lago</h1>
-            <p>Sport, natura e comunità per la rinascita di Lago Patria</p>
-            <a href="#progetti" class="btn btn-primary btn-lg" style="background:#0073bf; border:none; padding:15px 30px; border-radius:30px; margin-top:20px; color:white; text-decoration:none; display:inline-block;">Scopri i nostri progetti</a>
+            <h2>Adottiamo il Lago</h2>
+            <p>Un presidio di sport, natura e solidarietà a Lago Patria</p>
+            <a href="#progetti" class="btn-gold">Esplora la Sezione</a>
         </div>
     </header>
 
-    <section class="section-padding" id="vision">
-        <div class="container" style="max-width:900px; margin:0 auto; padding:0 15px;">
-            <div class="text-center" style="text-align:center; margin-bottom:50px;">
-                <h2 class="text-primary-lni" style="font-size:2.5rem;">Un presidio per il territorio</h2>
-                <div style="width:50px; height:3px; background:#0073bf; margin:20px auto;"></div>
-                <p style="font-size:1.2rem; line-height:1.6;">La Lega Navale di Giugliano non è solo un circolo nautico, ma un presidio ambientale e sociale dedicato alla tutela e alla valorizzazione del Lago Patria.</p>
-            </div>
+    <section class="intro">
+        <h3>L'Impegno per il Territorio</h3>
+        <div class="divider"></div>
+        <p>Siamo una comunità attiva dedicata alla rinascita del Lago Patria. Attraverso lo sport e la cultura del mare, promuoviamo la tutela ambientale e il benessere sociale di Giugliano in Campania.</p>
+    </section>
+
+    <section class="features" id="progetti">
+        <div class="card">
+            <i class="fas fa-ship"></i>
+            <h4>Dragon Boat</h4>
+            <p>La nostra "Pagaia Rosa". Sport e solidarietà per la prevenzione e il sostegno delle donne, uniti nel ritmo del lago.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-heartbeat"></i>
+            <h4>Salute e Prevenzione</h4>
+            <p>In collaborazione con l'ASL Napoli 2 Nord, portiamo la cultura del benessere sul territorio attraverso il Gazebo della Salute.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-seedling"></i>
+            <h4>Ambiente e Scuola</h4>
+            <p>Educazione ambientale per le nuove generazioni, perché il futuro del Lago Patria nasce dal rispetto dei più piccoli.</p>
         </div>
     </section>
 
-    <section class="section-padding bg-light" id="progetti">
-        <div class="container" style="max-width:1100px; margin:0 auto; padding:0 15px;">
-            <div class="row" style="display:flex; flex-wrap:wrap; gap:30px;">
-                <div style="flex:1; min-width:300px;">
-                    <h3 class="text-primary-lni">🚣‍♀️ Dragon Boat</h3>
-                    <p>Una pagaia rosa per la prevenzione. Il Dragon Boat sul Lago Patria è una delle discipline di punta della nostra sezione, simbolo di forza, consapevolezza e rinascita.</p>
-                </div>
-                <div style="flex:1; min-width:300px;">
-                    <h3 class="text-primary-lni">🏥 Cultura della Salute</h3>
-                    <p>In collaborazione con l'ASL Napoli 2 Nord, promuoviamo la salute "in tutte le politiche", collegando il benessere dell'individuo a quello dell'ambiente circostante.</p>
-                </div>
-                <div style="flex:1; min-width:300px;">
-                    <h3 class="text-primary-lni">🌱 Educazione Ambientale</h3>
-                    <p>Lavoriamo con le scuole, come il V Circolo Montessori, per insegnare ai più giovani il rispetto per l'acqua e il suolo del nostro territorio.</p>
-                </div>
-            </div>
+    <section style="background: white; padding: 60px 0;">
+        <h3 style="text-align:center; font-family:'Playfair Display', serif; font-size: 2.5rem; color:var(--lni-blue); margin-bottom:40px;">Momenti della Sezione</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="IMG-20260527-WA0024.jpg" alt="Attività"></div>
+            <div class="gallery-item"><img src="IMG-20260527-WA0032.jpg" alt="Gruppo"></div>
+            <div class="gallery-item"><img src="IMG-20260527-WA0045.jpg" alt="Sede"></div>
+            <div class="gallery-item"><img src="IMG-20260527-WA0053.jpg" alt="Giovani"></div>
+            <div class="gallery-item"><img src="IMG-20260527-WA0084.jpg" alt="Eventi"></div>
+            <div class="gallery-item"><img src="IMG-20260527-WA0019.jpg" alt="Lago"></div>
         </div>
     </section>
 
-    <section class="section-padding">
-        <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px;">
-            <h2 class="text-center text-primary-lni" style="text-align:center; margin-bottom:40px;">Galleria Fotografica</h2>
-            <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:20px;">
-                <div class="gallery-item"><img src="IMG-20260527-WA0024.jpg" alt="Attività Lago"></div>
-                <div class="gallery-item"><img src="IMG-20260527-WA0032.jpg" alt="Open Day"></div>
-                <div class="gallery-item"><img src="IMG-20260527-WA0045.jpg" alt="Sede"></div>
-                <div class="gallery-item"><img src="IMG-20260527-WA0053.jpg" alt="Bambini"></div>
-                <div class="gallery-item"><img src="IMG-20260527-WA0084.jpg" alt="Premiazione"></div>
-                <div class="gallery-item"><img src="IMG-20260527-WA0098.jpg" alt="Panorama Lago"></div>
-            </div>
+    <footer>
+        <div class="footer-logo">
+            <img src="mod/aalborg_theme/graphics/nuovo_layout/images/logo.png" alt="Logo LNI" style="filter: brightness(0) invert(1);">
         </div>
-    </section>
-
-    <footer style="background:#004d80; color:white; padding:40px 0; text-align:center;">
-        <div class="container">
-            <p>&copy; 2026 Lega Navale Italiana - Sezione di Giugliano in Campania</p>
-            <p><small>Presidio nautico, ambientale e sociale per Lago Patria</small></p>
-            <div style="margin-top:20px;">
-                <a href="https://www.instagram.com/lega_navale_italiana_giugliano" style="color:white; margin:0 10px;">Instagram</a>
-                <a href="https://maps.app.goo.gl/TRGfbNiwQKC931U9A" style="color:white; margin:0 10px;">Dove siamo</a>
-            </div>
+        <h4 style="font-size: 24px; margin-bottom: 20px;">Lega Navale Italiana</h4>
+        <p>Sezione di Giugliano in Campania - Lago Patria</p>
+        <div class="social-links" style="margin-top: 30px;">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Lega Navale Italiana - Sezione di Giugliano in Campania. Tutti i diritti riservati.
         </div>
     </footer>
 
