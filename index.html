@@ -8,7 +8,7 @@
     
     <!-- Importazione Font Istituzionali Simili -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         :root {
@@ -32,7 +32,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Top Bar - Desktop Optimization */
+        /* Top Bar */
         .top-bar {
             background-color: var(--lni-blue);
             color: white;
@@ -44,7 +44,7 @@
             font-weight: 500;
         }
 
-        /* Navigation - Desktop Optimization */
+        /* Navigation */
         nav {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
@@ -53,7 +53,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
         }
         .nav-container {
             max-width: var(--container-width);
@@ -72,7 +71,6 @@
         .logo-box img {
             height: 85px;
             margin-right: 20px;
-            transition: height 0.3s;
         }
         .logo-text h1 {
             font-size: 24px;
@@ -90,13 +88,28 @@
             margin-top: 2px;
         }
 
-        /* Hero Section - Desktop Focus */
+        .nav-social {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-social a {
+            color: var(--lni-blue);
+            font-size: 18px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .nav-social a:hover {
+            color: var(--lni-gold);
+        }
+
+        /* Hero Section */
         .hero {
             height: 85vh;
             background: linear-gradient(rgba(0, 51, 102, 0.5), rgba(0, 51, 102, 0.3)), url('IMG-20260527-WA0098.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax effect for desktop */
+            background-attachment: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -107,11 +120,10 @@
         .hero-content {
             max-width: 1000px;
             padding: 40px;
-            animation: fadeIn 1.5s ease-out;
         }
         .hero-content h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 5.5rem; /* Larger on Desktop */
+            font-size: 5.5rem;
             margin-bottom: 20px;
             line-height: 1;
             font-weight: 900;
@@ -123,13 +135,6 @@
             font-weight: 300;
             letter-spacing: 2px;
             text-transform: uppercase;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .btn-gold {
@@ -138,67 +143,19 @@
             padding: 18px 50px;
             text-decoration: none;
             font-weight: 700;
-            border-radius: 50px; /* Pill shape for desktop */
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 50px;
+            transition: all 0.4s;
             text-transform: uppercase;
             font-size: 15px;
             display: inline-block;
             box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
-            border: 2px solid transparent;
         }
         .btn-gold:hover {
-            background-color: transparent;
-            border-color: var(--lni-gold);
-            color: var(--lni-gold);
             transform: scale(1.05);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
-        /* Intro Section - Desktop Whitespace */
-        .intro {
-            padding: 140px 40px;
-            text-align: center;
-            background: var(--lni-white);
-            position: relative;
-        }
-        .intro::after {
-            content: "LNI";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 20rem;
-            font-weight: 900;
-            color: rgba(0, 51, 102, 0.02);
-            z-index: 0;
-            pointer-events: none;
-        }
-        .intro-content {
-            position: relative;
-            z-index: 1;
-        }
-        .intro h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: var(--lni-blue);
-            margin-bottom: 30px;
-        }
-        .intro p {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 1.35rem;
-            color: #666;
-            line-height: 1.8;
-            font-weight: 400;
-        }
-        .divider {
-            width: 100px;
-            height: 4px;
-            background: var(--lni-gold);
-            margin: 40px auto;
-        }
-
-        /* Grid Features - Desktop Grid */
+        /* Features Section */
         .features-section {
             background-color: var(--lni-gray);
             padding: 100px 0;
@@ -218,11 +175,9 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.03);
             transition: all 0.5s ease;
             text-align: center;
-            border: 1px solid rgba(0,0,0,0.05);
         }
         .card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
             border-bottom: 6px solid var(--lni-blue);
         }
         .card i {
@@ -231,79 +186,22 @@
             margin-bottom: 30px;
             display: block;
         }
-        .card h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--lni-blue);
-            margin-bottom: 20px;
-        }
-        .card p {
-            font-size: 1.1rem;
-            color: #777;
-        }
 
-        /* Showcase Gallery - Desktop Mosaic */
-        .showcase {
-            padding: 120px 0;
-        }
-        .gallery-container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-        .gallery-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 60px;
-        }
-        .gallery-header h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--lni-blue);
-            margin: 0;
-        }
+        /* Showcase Gallery */
+        .showcase { padding: 120px 0; }
+        .gallery-container { max-width: var(--container-width); margin: 0 auto; padding: 0 40px; }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-auto-rows: 300px;
             gap: 20px;
         }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        .gallery-item.large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.8s ease;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.15) rotate(1deg);
-            filter: brightness(0.8);
-        }
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 30px;
-            background: linear-gradient(transparent, rgba(0,51,102,0.8));
-            color: white;
-            opacity: 0;
-            transition: 0.5s;
-        }
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 10px; }
+        .gallery-item.large { grid-column: span 2; grid-row: span 2; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+        .gallery-item:hover img { transform: scale(1.1); }
 
-        /* Footer - Premium Desktop */
+        /* Footer */
         footer {
             background: var(--lni-blue);
             color: white;
@@ -315,7 +213,6 @@
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
             gap: 80px;
-            text-align: left;
         }
         .footer-logo img {
             height: 100px;
@@ -329,11 +226,11 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        .footer-col p { opacity: 0.8; font-size: 1rem; }
         .social-box {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             margin-top: 30px;
+            flex-wrap: wrap;
         }
         .social-box a {
             width: 45px;
@@ -344,7 +241,7 @@
             justify-content: center;
             border-radius: 50%;
             color: white;
-            font-size: 18px;
+            font-size: 20px;
             transition: 0.3s;
             text-decoration: none;
         }
@@ -362,26 +259,21 @@
             opacity: 0.6;
         }
 
-        /* Tablet & Mobile Overrides */
+        /* Mobile Adjustments */
         @media (max-width: 1024px) {
             .hero-content h2 { font-size: 4rem; }
             .features { grid-template-columns: repeat(2, 1fr); }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-            .footer-logo { margin: 0 auto; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
             .social-box { justify-content: center; }
         }
-
         @media (max-width: 768px) {
             .hero-content h2 { font-size: 3rem; }
-            .hero-content p { font-size: 1.2rem; }
             .features { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: 1fr; }
             .nav-container { padding: 0 20px; }
             .logo-text h1 { font-size: 18px; }
-            .intro h3 { font-size: 2.5rem; }
-            nav { padding: 5px 0; }
             .logo-box img { height: 60px; }
+            .nav-social { display: none; } /* Hide on very small screens to save space */
         }
     </style>
 </head>
@@ -400,10 +292,12 @@
                     <span>Sezione di Giugliano in Campania</span>
                 </div>
             </a>
-            <div class="social-links d-none d-md-block">
-                <a href="#progetti" class="btn-gold" style="padding: 10px 25px; font-size: 12px; margin-right: 20px;">Iscriviti</a>
-                <a href="#" style="color:var(--lni-blue); margin-right:15px;"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" style="color:var(--lni-blue)"><i class="fab fa-instagram"></i></a>
+            <div class="nav-social">
+                <a href="https://www.facebook.com/leganavaleitaliana" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/leganavaleitaliana" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/leganavale_it" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/@LegaNavaleItaliana_pn" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://whatsapp.com/channel/0029Val5SXsBadmQi46zxf1r" target="_blank" title="Canale WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </nav>
@@ -412,64 +306,47 @@
         <div class="hero-content">
             <h2>Adottiamo il Lago</h2>
             <p>Sport, Natura e Comunità per Lago Patria</p>
-            <a href="#storia" class="btn-gold">Scopri la nostra missione</a>
+            <a href="https://whatsapp.com/channel/0029Val5SXsBadmQi46zxf1r" target="_blank" class="btn-gold"><i class="fab fa-whatsapp" style="margin-right:10px;"></i> Entra nel Canale</a>
         </div>
     </header>
-
-    <section class="intro" id="storia">
-        <div class="intro-content">
-            <h3>Rinascita del Territorio</h3>
-            <div class="divider"></div>
-            <p>La Sezione di Giugliano in Campania della Lega Navale Italiana nasce come un presidio vivo su Lago Patria. La nostra missione è trasformare questo specchio d'acqua in un luogo di inclusione, tutela ambientale e crescita per l'intera comunità.</p>
-        </div>
-    </section>
 
     <section class="features-section" id="progetti">
         <div class="features">
             <div class="card">
                 <i class="fas fa-water"></i>
                 <h4>Dragon Boat</h4>
-                <p>Una "Pagaia Rosa" per la vita. Portiamo sul lago la solidarietà e la forza delle donne in un percorso di rinascita e sport collettivo.</p>
+                <p>La nostra "Pagaia Rosa" per la vita. Portiamo sul lago la solidarietà e la forza delle donne.</p>
             </div>
             <div class="card">
                 <i class="fas fa-hand-holding-heart"></i>
-                <h4>Salute One Health</h4>
-                <p>In sinergia con l'ASL Napoli 2 Nord, promuoviamo l'inscindibilità tra salute umana e salute ambientale attraverso progetti di prevenzione attiva.</p>
+                <h4>Salute</h4>
+                <p>In sinergia con l'ASL Napoli 2 Nord per la prevenzione attiva sul territorio.</p>
             </div>
             <div class="card">
                 <i class="fas fa-anchor"></i>
                 <h4>Scuola di Mare</h4>
-                <p>Formiamo i giovani del territorio ai valori della marineria e del rispetto ecologico, collaborando con i circoli scolastici locali.</p>
+                <p>Formiamo i giovani del territorio ai valori della marineria e del rispetto ecologico.</p>
             </div>
         </div>
     </section>
 
     <section class="showcase">
         <div class="gallery-container">
-            <div class="gallery-header">
-                <h3>Vivi la Sezione</h3>
-                <p style="color:var(--lni-light-blue); font-weight:600; text-transform:uppercase; letter-spacing:1px;">Galleria Attività</p>
-            </div>
             <div class="gallery-grid">
                 <div class="gallery-item large">
                     <img src="IMG-20260527-WA0098.jpg" alt="Lago Patria">
-                    <div class="gallery-overlay"><h4>Panorama del Lago</h4><p>Il nostro campo di regata</p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="IMG-20260527-WA0032.jpg" alt="Inaugurazione">
-                    <div class="gallery-overlay"><h4>Eventi</h4></div>
+                    <img src="IMG-20260527-WA0032.jpg" alt="Eventi">
                 </div>
                 <div class="gallery-item">
                     <img src="IMG-20260527-WA0045.jpg" alt="Sede LNI">
-                    <div class="gallery-overlay"><h4>La Nuova Sede</h4></div>
                 </div>
                 <div class="gallery-item">
                     <img src="IMG-20260527-WA0053.jpg" alt="Giovani">
-                    <div class="gallery-overlay"><h4>Educazione</h4></div>
                 </div>
                 <div class="gallery-item">
                     <img src="IMG-20260527-WA0084.jpg" alt="Premiazione">
-                    <div class="gallery-overlay"><h4>Traguardi</h4></div>
                 </div>
             </div>
         </div>
@@ -481,29 +358,32 @@
                 <div class="footer-logo">
                     <img src="mod/aalborg_theme/graphics/nuovo_layout/images/logo.png" alt="Logo LNI">
                 </div>
-                <h5>Lega Navale Italiana</h5>
-                <p>Sezione di Giugliano in Campania - Un ente pubblico dedicato al mare, alla solidarietà e alla tutela del territorio di Lago Patria.</p>
+                <h5>Social Media Hub</h5>
+                <p>Segui i nostri canali ufficiali per rimanere aggiornato su tutte le attività nazionali e locali.</p>
                 <div class="social-box">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/leganavaleitaliana" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/leganavaleitaliana" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/leganavale_it" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/@LegaNavaleItaliana_pn" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://whatsapp.com/channel/0029Val5SXsBadmQi46zxf1r" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@lega.navale" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h5>Contatti</h5>
+                <h5>Contatti Locali</h5>
                 <p><i class="fas fa-map-marker-alt" style="margin-right:10px;"></i> Lago Patria, Giugliano in Campania (NA)</p>
                 <p><i class="fas fa-envelope" style="margin-right:10px;"></i> giugliano@leganavale.it</p>
                 <p><i class="fas fa-phone" style="margin-right:10px;"></i> +39 393 486 7920</p>
             </div>
             <div class="footer-col">
-                <h5>Link Utili</h5>
-                <p><a href="https://www.leganavale.it" style="color:white; text-decoration:none;">Presidenza Nazionale</a></p>
-                <p><a href="#" style="color:white; text-decoration:none;">Diventa Socio</a></p>
-                <p><a href="#" style="color:white; text-decoration:none;">Trasparenza</a></p>
+                <h5>Link Rapidi</h5>
+                <p><a href="https://www.leganavale.it" style="color:white; text-decoration:none;">Sito Nazionale</a></p>
+                <p><a href="https://www.leganavale.it/registrati" style="color:white; text-decoration:none;">Diventa Socio</a></p>
+                <p><a href="https://www.leganavale.it/sezione/42594/COMUNICAZIONE-PROGETTI-ED-EDITORIA" style="color:white; text-decoration:none;">Rivista "Lega Navale"</a></p>
             </div>
         </div>
         <div class="copyright">
-            &copy; 2026 Lega Navale Italiana - Sezione di Giugliano in Campania. Identità e Copy curati per Lago Patria.
+            &copy; 2026 Lega Navale Italiana - Sezione di Giugliano in Campania. Connessi per il mare.
         </div>
     </footer>
 
