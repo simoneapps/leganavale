@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Blog - Lega Navale Italiana Sezione di Giugliano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --lni-blue: #003366; 
+            --lni-light-blue: #0073bf;
+            --lni-gold: #c5a059; 
+            --lni-white: #ffffff;
+            --lni-gray: #f8f9fa;
+            --container-width: 900px;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0; padding: 0; color: #2d2d2d; line-height: 1.8; background-color: var(--lni-gray);
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 10px 0;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 40px;
+        }
+        .logo-box { display: flex; align-items: center; text-decoration: none; color: var(--lni-blue); }
+        .logo-box img { height: 85px; margin-right: 20px; }
+        .logo-text h1 { font-size: 24px; margin: 0; font-weight: 800; }
+        .logo-text span { font-size: 14px; display: block; color: var(--lni-light-blue); text-transform: uppercase; font-weight: 600; }
+        
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--lni-blue); font-weight: 600; text-transform: uppercase; font-size: 13px; }
+
+        .blog-header { background: var(--lni-blue); color: white; padding: 80px 0; text-align: center; }
+        .blog-header h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; }
+
+        .article-container { max-width: var(--container-width); margin: 60px auto; padding: 0 20px; }
+        .blog-post { background: white; padding: 60px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+        .post-meta { color: var(--lni-gold); font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 20px; display: block; }
+        .blog-post h3 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--lni-blue); margin-top: 0; line-height: 1.2; }
+        .blog-post p { margin-bottom: 25px; font-size: 1.1rem; }
+        .blog-post strong { color: var(--lni-blue); }
+
+        footer { background: var(--lni-blue); color: white; padding: 60px 40px 40px; }
+        .copyright { text-align: center; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 13px; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <img src="mod/aalborg_theme/graphics/nuovo_layout/images/logo.png" alt="Logo LNI">
+                <div class="logo-text">
+                    <h1>LEGA NAVALE ITALIANA</h1>
+                    <span>Sezione di Giugliano in Campania</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="attivita.html">Attività</a>
+                <a href="blog.html">Blog</a>
+                <a href="storia.html">Storia</a>
+                <a href="eventi.html">Eventi</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="blog-header">
+        <h2>Blog & Salute</h2>
+    </header>
+
+    <div class="article-container">
+        <article class="blog-post">
+            <span class="post-meta">In Evidenza - Salute e Territorio</span>
+            <h3>La cultura della prevenzione al servizio della salute</h3>
+            
+            <p>La prevenzione delle malattie e il mantenimento di un buono stato di salute rappresentano diritti e doveri imprescindibili di ogni cittadino. A tal fine, è fondamentale che la popolazione riceva informazioni adeguate per approfondire i temi della salute e dell’ambiente, strettamente connessi al benessere individuale e collettivo.</p>
+            
+            <p>In questa prospettiva, il personale del <strong>Dipartimento di Prevenzione della ASL Napoli 2 Nord</strong> è da sempre impegnato nella promozione di attività di educazione alla salute e nella diffusione della cultura della prevenzione, maturando negli anni una solida esperienza e una proficua collaborazione con il territorio.</p>
+            
+            <p>Questo approccio all’educazione sanitaria ha consentito di sviluppare molteplici competenze, condivise con la collettività in diversi ambiti di intervento, permettendo di adottare strategie specifiche e adeguate ai differenti contesti territoriali, sociali e socio-economici, nel rispetto anche degli assetti istituzionali locali.</p>
+            
+            <p>La promozione della salute “in tutte le politiche” rappresenta, infatti, una strategia indispensabile per la tutela della salute dei cittadini. In particolare, l’attuazione dei programmi previsti dal Piano Regionale della Prevenzione ha favorito una significativa sinergia con le istituzioni scolastiche, attraverso attività di formazione e informazione sui temi dell’educazione ambientale e del rispetto del territorio. La contaminazione delle matrici ambientali — aria, suolo, sottosuolo e acqua — espone infatti l’organismo umano a sostanze potenzialmente dannose per la salute.</p>
+            
+            <p>Purtroppo, la Regione Campania registra tassi elevati di mortalità e morbosità legati a patologie evitabili, spesso correlate agli inquinanti ambientali, oltre a un’incidenza di obesità infantile tra le più alte d’Italia. L’esperienza maturata nelle attività sul campo e nella gestione della prevenzione evidenzia quanto sia fondamentale la correlazione tra uomo, ambiente e salute.</p>
+            
+            <p>Conoscere i fattori di rischio che influenzano il nostro benessere consente infatti di adottare strategie di prevenzione mirate ed efficaci. Alcuni fattori di rischio, come gli inquinanti ambientali, risultano tuttavia difficilmente controllabili poiché, se presenti nell’aria, nell’acqua o negli alimenti, possono essere assorbiti attraverso le vie respiratorie, per ingestione e persino per via transdermica.</p>
+            
+            <p>Per garantire il benessere e la salute psicofisica dei cittadini, è quindi essenziale promuovere corretti stili di vita e la prevenzione delle patologie croniche non trasmissibili, attraverso una sana alimentazione, lo svolgimento di regolare attività fisica e l’adozione di comportamenti salutari, evitando fumo, abuso di alcol e dipendenze. È inoltre scientificamente dimostrato che la pratica sportiva e il contatto con la natura favoriscono il benessere psicofisico della persona.</p>
+            
+            <p>La ASL Napoli 2 Nord ha investito fortemente nell’intersettorialità quale strategia per ridurre le disuguaglianze nell’accesso alle cure, secondo il principio dell’Equità in Salute. In tale contesto assumono particolare rilievo gli obiettivi di sviluppo sostenibile previsti dall’Agenda 2030. È necessario favorire i cambiamenti culturali volti ad accrescere la consapevolezza e il senso di responsabilità dei cittadini nella corretta gestione del territorio.</p>
+            
+            <p>È fondamentale attraverso iniziative operative, come l’<strong>open day del 22 maggio 2026</strong>, promosso dalla Lega Navale Italiana, incrementare la collaborazione tra istituzioni e comunità locali e sensibilizzare la popolazione sull’importanza della prevenzione, della salvaguardia dell’ambiente e della tutela della salute pubblica.</p>
+        </article>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2026 Lega Navale Italiana - Sezione di Giugliano in Campania.
+        </div>
+    </footer>
+
+</body>
+</html>

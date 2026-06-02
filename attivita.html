@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Le Nostre Attività - Lega Navale Italiana Sezione di Giugliano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --lni-blue: #003366; 
+            --lni-light-blue: #0073bf;
+            --lni-gold: #c5a059; 
+            --lni-white: #ffffff;
+            --lni-gray: #f8f9fa;
+            --container-width: 1100px;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0; padding: 0; color: #2d2d2d; line-height: 1.7; background-color: var(--lni-white);
+        }
+
+        /* Navigation (Consistent) */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--lni-blue);
+        }
+        .logo-box img { height: 85px; margin-right: 20px; }
+        .logo-text h1 { font-size: 24px; margin: 0; font-weight: 800; line-height: 1.1; }
+        .logo-text span { font-size: 14px; display: block; color: var(--lni-light-blue); text-transform: uppercase; font-weight: 600; }
+        
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--lni-blue); font-weight: 600; text-transform: uppercase; font-size: 13px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--lni-gold); }
+
+        /* Header Page */
+        .page-header {
+            background: var(--lni-blue);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .page-header h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0; }
+
+        /* Article Structure */
+        .article-container {
+            max-width: var(--container-width);
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 80px;
+            overflow: hidden;
+        }
+        .article-content { padding: 40px; }
+        .article-header { display: flex; gap: 40px; margin-bottom: 40px; }
+        .article-cover { flex: 0 0 400px; height: 300px; border-radius: 10px; overflow: hidden; }
+        .article-cover img { width: 100%; height: 100%; object-fit: cover; }
+        .article-text { flex: 1; }
+        .article-text h3 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-top: 0; color: var(--lni-blue); }
+        .article-category { color: var(--lni-gold); font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 10px; display: block; }
+        
+        footer { background: var(--lni-blue); color: white; padding: 60px 40px 40px; margin-top: 100px; }
+        .footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+        .footer-col h5 { color: var(--lni-gold); margin-bottom: 20px; }
+        .copyright { text-align: center; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 13px; opacity: 0.6; }
+
+        @media (max-width: 768px) {
+            .article-header { flex-direction: column; }
+            .article-cover { flex: 0 0 auto; width: 100%; height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <img src="mod/aalborg_theme/graphics/nuovo_layout/images/logo.png" alt="Logo LNI">
+                <div class="logo-text">
+                    <h1>LEGA NAVALE ITALIANA</h1>
+                    <span>Sezione di Giugliano in Campania</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="attivita.html">Attività</a>
+                <a href="blog.html">Blog</a>
+                <a href="storia.html">Storia</a>
+                <a href="eventi.html">Eventi</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h2>Le Nostre Attività</h2>
+    </header>
+
+    <div class="article-container">
+        <!-- Dragon Boat -->
+        <article class="article-card">
+            <div class="article-content">
+                <div class="article-header">
+                    <div class="article-cover">
+                        <img src="IMG-20260527-WA0104.jpg" alt="Dragon Boat">
+                    </div>
+                    <div class="article-text">
+                        <span class="article-category">Sport e Sociale</span>
+                        <h3>Dragon Boat: La Pagaia Rosa</h3>
+                        <p>Il Dragon Boat rappresenta una delle attività di punta della nostra sezione. Non è solo uno sport, ma un potente strumento di inclusione sociale e riabilitazione psico-fisica.</p>
+                        <p>Il progetto "Pagaia Rosa" è dedicato in particolare alle donne che hanno affrontato o stanno affrontando il percorso di cura per il tumore al seno. La pagaia diventa simbolo di forza, solidarietà e rinascita. Remare insieme su una barca a forma di drago non solo favorisce il recupero fisico, ma crea un legame unico tra le partecipanti, che si sostengono a vicenda in una sfida che va oltre lo sport.</p>
+                        <p>Le nostre attività si svolgono nelle acque del Lago Patria, dove la calma del lago si unisce alla grinta delle nostre atlete.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Scuola di Mare -->
+        <article class="article-card">
+            <div class="article-content">
+                <div class="article-header">
+                    <div class="article-cover">
+                        <img src="IMG-20260527-WA0053.jpg" alt="Scuola di Mare">
+                    </div>
+                    <div class="article-text">
+                        <span class="article-category">Formazione</span>
+                        <h3>Scuola di Mare e Vela</h3>
+                        <p>Formare i "marinai di domani" è la nostra missione. La Scuola di Mare della Lega Navale di Giugliano offre percorsi formativi per bambini, ragazzi e adulti.</p>
+                        <p>Attraverso corsi di vela, canottaggio e biologia marina, insegniamo il rispetto per l'ambiente acquatico e i valori della marineria: coraggio, responsabilità e spirito di squadra. Le lezioni teoriche e pratiche permettono di acquisire competenze nautiche solide in un ambiente sicuro e stimolante.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h5>Lega Navale Giugliano</h5>
+                <p>Cultura del mare e sport per tutti.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Contatti</h5>
+                <p>Email: giugliano@leganavale.it<br>WhatsApp: +39 379 380 1460</p>
+            </div>
+            <div class="footer-col">
+                <h5>Link</h5>
+                <p><a href="index.html" style="color:white;">Home</a> | <a href="attivita.html" style="color:white;">Attività</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Lega Navale Italiana - Sezione di Giugliano in Campania.
+        </div>
+    </footer>
+
+</body>
+</html>
