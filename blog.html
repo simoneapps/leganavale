@@ -40,7 +40,10 @@
         .logo-text span { font-size: 14px; display: block; color: var(--lni-light-blue); text-transform: uppercase; font-weight: 600; }
         
         .nav-links { display: flex; gap: 25px; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--lni-blue); font-weight: 600; text-transform: uppercase; font-size: 13px; }
+        .nav-links a { text-decoration: none; color: var(--lni-blue); font-weight: 700; text-transform: uppercase; font-size: 13px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--lni-gold); }
+
+        .menu-toggle { display: none; font-size: 28px; color: var(--lni-blue); cursor: pointer; }
 
         .blog-header { background: var(--lni-blue); color: white; padding: 80px 0; text-align: center; }
         .blog-header h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; }
@@ -54,6 +57,27 @@
 
         footer { background: var(--lni-blue); color: white; padding: 60px 40px 40px; }
         .copyright { text-align: center; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; font-size: 13px; opacity: 0.6; }
+
+        @media (max-width: 1024px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 30px;
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                gap: 20px;
+                text-align: center;
+                border-top: 1px solid #eee;
+            }
+            .nav-links.active { display: flex; }
+            .nav-container { padding: 0 20px; }
+            .blog-post { padding: 30px; }
+        }
     </style>
 </head>
 <body>
@@ -67,12 +91,15 @@
                     <span>Sezione di Giugliano in Campania</span>
                 </div>
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="attivita.html">Attività</a>
                 <a href="blog.html">Blog</a>
                 <a href="storia.html">Storia</a>
                 <a href="eventi.html">Eventi</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
@@ -96,7 +123,7 @@
             
             <p>Purtroppo, la Regione Campania registra tassi elevati di mortalità e morbosità legati a patologie evitabili, spesso correlate agli inquinanti ambientali, oltre a un’incidenza di obesità infantile tra le più alte d’Italia. L’esperienza maturata nelle attività sul campo e nella gestione della prevenzione evidenzia quanto sia fondamentale la correlazione tra uomo, ambiente e salute.</p>
             
-            <p>Conoscere i fattori di rischio che influenzano il nostro benessere consente infatti di adottare strategie di prevenzione mirate ed efficaci. Alcuni fattori di rischio, come gli inquinanti ambientali, risultano tuttavia difficilmente controllabili poiché, se presenti nell’aria, nell’acqua o negli alimenti, possono essere assorbiti attraverso le vie respiratorie, per ingestione e persino per via transdermica.</p>
+            <p>Conoscere i fattori di rischio che influenzano il nostro benessere consente infatti di adottare strategie de prevenzione mirate ed efficaci. Alcuni fattori di rischio, come gli inquinanti ambientali, risultano tuttavia difficilmente controllabili poiché, se presenti nell’aria, nell’acqua o negli alimenti, possono essere assorbiti attraverso le vie respiratorie, per ingestione e persino per via transdermica.</p>
             
             <p>Per garantire il benessere e la salute psicofisica dei cittadini, è quindi essenziale promuovere corretti stili di vita e la prevenzione delle patologie croniche non trasmissibili, attraverso una sana alimentazione, lo svolgimento di regolare attività fisica e l’adozione di comportamenti salutari, evitando fumo, abuso di alcol e dipendenze. È inoltre scientificamente dimostrato che la pratica sportiva e il contatto con la natura favoriscono il benessere psicofisico della persona.</p>
             
@@ -112,5 +139,11 @@
         </div>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

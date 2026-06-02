@@ -292,26 +292,33 @@
                     <span>Sezione di Giugliano in Campania</span>
                 </div>
             </a>
-            <style>
-                .nav-main-links { display: flex; gap: 20px; margin: 0 30px; }
-                .nav-main-links a { text-decoration: none; color: var(--lni-blue); font-weight: 700; text-transform: uppercase; font-size: 13px; transition: 0.3s; }
-                .nav-main-links a:hover { color: var(--lni-gold); }
-                @media (max-width: 1024px) { .nav-main-links { display: none; } }
-            </style>
-            <div class="nav-main-links">
+            
+            <div class="nav-main-links" id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="attivita.html">Attività</a>
                 <a href="blog.html">Blog</a>
                 <a href="storia.html">Storia</a>
                 <a href="eventi.html">Eventi</a>
             </div>
+
             <div class="nav-social">
                 <a href="https://www.facebook.com/share/1XzdyFtsT1/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/leganavaledigiugliano?igsh=MW5rMWNlbTltMmd3MA==" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/393793801460" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 
     <header class="hero">
         <div class="hero-content">
@@ -384,6 +391,20 @@
                 <p><i class="fas fa-phone" style="margin-right:10px;"></i> +39 379 380 1460</p>
             </div>
             <div class="footer-col">
+                <h5>Link Rapidi</h5>
+                <p><a href="https://www.leganavale.it" target="_blank" style="color:white; text-decoration:none;">Sito Nazionale</a></p>
+                <p><a href="https://www.leganavale.it/struttura/associati" target="_blank" style="color:white; text-decoration:none;">Diventa Socio</a></p>
+                <p><a href="https://whatsapp.com/channel/0029VaB0RAn1XquW6LqG3M3f" target="_blank" style="color:white; text-decoration:none;">Canale WhatsApp Nazionale</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Lega Navale Italiana - Sezione di Giugliano in Campania. Connessi per il mare.
+        </div>
+    </footer>
+
+</body>
+</html>
+footer-col">
                 <h5>Link Rapidi</h5>
                 <p><a href="https://www.leganavale.it" target="_blank" style="color:white; text-decoration:none;">Sito Nazionale</a></p>
                 <p><a href="https://www.leganavale.it/struttura/associati" target="_blank" style="color:white; text-decoration:none;">Diventa Socio</a></p>
